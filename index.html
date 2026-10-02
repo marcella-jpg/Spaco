@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spatium Cogitationis</title>
+    <style>
+        body    {
+            margin: 0%;
+            display: flex;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background: #faf8f5;
+            color: #222;
+        }
+
+        .sidebar {
+            width: 220px;
+            height: 110vh;
+            position: sticky;
+            top: 0;
+            padding: 32px 0;
+            border-right: 1px solid #ddd;
+        }
+
+        .logo {
+            display: block;
+            padding: 0 24px 32px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+            color: #222;
+        }
+
+        nav {
+            display: flex;
+            flex-direction: column;
+        }
+
+        nav a {
+            position: relative;
+            padding: 12px 24px;
+            text-decoration: none;
+            color: #222;
+        }
+
+        nav a::before {
+            content: " ";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100;
+            background: #d9cfc0;
+            transition: width 0.3s ease;
+            z-index: ;
+        }
+        nav a:hover ::before {
+            width: 25%;
+        }
+
+        main {
+            flex: 1;
+            padding: 48px;
+
+        .hero {
+            max-width: 640px;
+            padding: 80px 0;
+            }
+
+        .eyebrow {
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-size: 0.8rem;
+            color: #777;
+            }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin: 8px 0;
+            }
+
+        .tagline {
+            font-size: 1.4rem;
+            font-style: italic;
+            color: #555;
+            }
+
+        .intro {
+            line-height: 1.7;
+            margin: 24px 0 32px;
+            }
+
+        .button {
+            display: inline-block;
+            padding: 12px 28px;
+            background: #222;
+            color: #faf8f5;
+            text-decoration: none;
+            }
+
+        .button:hover {
+            background: #555;
+            }
+        }
+
+        .latest h2 {
+            font-size: 1.8rem;
+            margin-bottom: 24px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 24px;
+        }
+
+        .card {
+            padding: 24px;
+            background: white;
+            border: 1px solid #e5dfd5;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+        }
+
+        .card-type {
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-size: 0.75rem;
+            color: #777;
+            margin: 0 0 8px;
+        }
+
+        .card h3 {
+            margin: 0 0 12px;
+        }
+
+        .card a {
+            color: #222;
+        }
+
+        @media (max-width: 700px) {
+        body {
+            flex-direction: column;
+        }
+
+        .sidebar {
+            width: 100%;
+            height: auto;
+            position: static;
+            padding: 16px 0;
+            border-right: none;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .logo {
+            padding-bottom: 12px;
+        }
+
+        nav {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            padding: 8px 16px;
+        }
+
+        main {
+            padding: 24px;
+        }
+
+        .hero {
+            padding: 40px 0;
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+        }
+        }
+    </style>
+</head>
+<body>
+        <aside class="sidebar">
+            <a href="index.html" class="logo">Spaco</a>
+        <nav>
+            <a href="essays.html">Essay</a>
+            <a href="videos.html">Videos</a>
+            <a href="art.html">Art</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        </aside>
+        
+        <main>
+            <section class="hero">
+                <p class="eyebrow">Philosophy · Essays · Art</p>
+                <h1>Spatium Cogitationis</h1>
+                <p class="tagline">A space of thought.</p>
+                <p class="intro">
+                Spaco is a community for exploring philosophy through
+                video essays, short reels, writing, and art.
+                </p>
+                <a href="#" class="button">Explore the work</a>
+            </section>
+        <section class="latest">
+        <h2>Latest work</h2>
+
+        <div class="cards">
+            <article class="card">
+            <p class="card-type">Essay</p>
+            <h3>Title of your latest essay</h3>
+            <p>A one or two sentence summary of what the essay explores.</p>
+            <a href="#">Read more →</a>
+            </article>
+
+            <article class="card">
+            <p class="card-type">Video</p>
+            <h3>Title of your latest video</h3>
+            <p>A short description of what the video essay is about.</p>
+            <a href="#">Watch →</a>
+            </article>
+
+            <article class="card">
+            <p class="card-type">Art</p>
+            <h3>Title of your latest artwork</h3>
+            <p>A short note on the idea or story behind the piece.</p>
+            <a href="#">View →</a>
+            </article>
+        </div>
+        </section>
+        </main>
+</body>
+</html>
